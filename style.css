@@ -1,0 +1,374 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+  background: #111;
+}
+
+.first-page{
+  text-align: center;
+  background-image: url('ressources/hero-background1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; 
+  height: 970px;
+
+}
+
+
+.down-arrow{
+height: 50px;
+width: 50px;
+border: 1px solid grey;
+padding: 15px 15px;
+border-radius: 50px;
+background-color: #111;
+position: absolute;
+top: 900px;
+transform: translate(-50%,-50%);
+opacity: 0;
+cursor: pointer;
+transition: opacity 2s ease-in-out;
+}
+.showDownArrow{
+ opacity: 1;}
+
+.nav-bare{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 20px;
+
+ 
+}
+.nav-bare a{
+  text-decoration: none;
+}
+ .nav-bare a::after{
+ content: "";
+ display: block;
+ background: #f0f0f0;
+ width: 20%;
+ height: 2px;
+ transition: width 0.2s ease-in-out;
+ }
+.nav-bare a:hover::after{
+  width: 100%;
+}
+
+.nav-bare :nth-child(1){
+ margin-right: 30px;
+ color: #f0f0f0;
+ display: inline;
+}
+
+.nav-bare :nth-child(2){
+  color: #f0f0f0;
+  display: inline;
+ 
+ }
+
+.nav-bare :nth-child(3){
+  margin-left: 30px;
+  color: #f0f0f0;
+  display: inline;
+ 
+ }
+
+.subtitle{
+  font-size: 20px;
+  color: #f0f0f0;
+  font-weight: 200;
+  margin-top: 15px;
+opacity: 0;
+transition: opacity 2s ease-in-out;
+}
+
+.show{
+  opacity: 1;
+}
+h1{
+  font-size: 80px;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  margin-top: 95px;
+  font-family: Montserrat, monospace;
+  display: inline-block;
+  position: relative;
+}
+
+h1::after{
+content: "";
+position: absolute;
+background: #f0f0f0;
+height: 100%;
+width: 3px;
+top: 0;
+right:-10px;
+ animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+
+.main-container{
+  height: auto;
+  width: 1100px;
+  margin: auto;
+ border-left: 1px solid grey;
+ border-right: 1px solid grey;
+ text-align: center;
+ color: #f1f1f1;
+}
+
+h2{
+
+  font-size: 60px;
+  padding-top: 40px;
+  font-weight: 300;
+}
+h2 span{
+  font-weight: 700;
+}
+h3{
+  font-family: "raleway";
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+
+}
+.subtitle1{
+  font-size: 16px;
+  margin-bottom: 80px;
+}
+.subtitle2{
+  font-size: 16px;
+  margin-bottom: 80px;
+}
+.section-discover{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+ 
+}
+.contact{
+  text-align: left;
+}
+
+.contact h3{
+  font-size: 30px;
+  font-weight: 400;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.paragraph{
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom:40px ;
+  line-height: 1.5;
+}
+
+.contact-link{
+  font-size: 16px;
+  border: 1px solid grey;
+display: inline-flex;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.contact-link p {
+  margin-right: 50px;
+  
+}
+.contact-link img {
+  color: #f1f1f1;
+  height: 15px;
+  width: 15px;
+  margin-top: 2px;
+  
+  
+}
+.section-apparition h2 {
+font-weight: 200;
+
+}
+.cayman{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.panamera{
+  display: flex;
+ justify-content: center;
+ flex-direction: row-reverse;
+ margin-bottom: 100px;
+}
+
+.panamera div {
+  margin-left:30px ;
+}
+.the911{
+  display: flex;
+  justify-content: center;
+ padding-bottom: 150px;
+
+}
+.content{
+ text-align: left;
+ margin-right:60px ;
+ margin-left: 60px;
+
+}
+
+.porche1{
+  height: 500px;
+  width: 429px;
+}
+.cayman img{
+ height: 200px;
+ width: 560px;
+
+}
+.panamera img{
+height: 200px;
+width: 560px;
+}
+.the911 img{
+  height: 200px;
+  width: 560px;
+  }
+
+  .car-img{
+    width: auto;
+    margin: auto;
+  }
+  @media (max-width:1100px) {
+    h1{
+      font-size: 40px;
+    }
+    h2{
+      font-size: 40px;
+    text-align: center;
+    }
+    .main-container{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: auto;
+  border: none;
+      
+    }
+    .section-discover{
+      justify-content: center;
+      flex-direction: column;
+        
+    }
+    .contact{
+      text-align: center;
+    }
+     .porche1{
+      display: none;
+    }
+    .car-img{
+      width: auto;
+      margin: auto;
+    }
+  }
+  
+  @media (max-width:900px) {
+     
+      .first-page{
+        height: 600px;
+  
+      }
+      .down-arrow{
+        top: 500px;
+      }
+      .cayman {
+      flex-direction: column;
+      
+    }
+  
+    .content{ 
+    text-align: center;
+    }
+  
+    .panamera{
+      flex-direction: column;
+     
+    }
+    .the911{
+      flex-direction: column;
+    
+    }
+  
+  .car-img{
+    width: auto;
+    margin: auto;
+  }
+  }
+  
+  @media (max-width:600px) {
+    h1{
+      font-size: 25px;
+    }
+    h2{
+      font-size: 30px;
+    text-align: center;
+    }
+    .car-img{
+      width: auto;
+      margin: auto;
+    }
+  
+    .cayman img{
+     height: 200px;
+     width: 400px;
+    
+    }
+    .panamera img{
+    height: 200px;
+    width: 400px;
+    }
+    .the911 img{
+      height: 200px;
+      width: 400px;
+      }
+  }
+  
+  @media (max-width:410px) {
+    .car-img{
+      width: auto;
+      margin: auto;
+    }
+  
+    .cayman img{
+     height: 200px;
+     width: 300px;
+    
+    }
+    .panamera img{
+    height: 200px;
+    width: 300px;
+    }
+    .the911 img{
+      height: 200px;
+      width: 300px;
+      }
+  }
